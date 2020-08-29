@@ -1,0 +1,41 @@
+image: marcoturi/ionic:latest
+
+stages:
+  - deploy
+
+cache:
+  untracked: true
+  key: "$CI_PROJECT_ID"
+  paths:
+    - node_modules/
+
+# build android apk file
+build_android:
+  stage: deploy
+  only:
+    - master
+  script:
+    - ls
+    - npm i
+    - ionic cordova platform rm android
+    - ionic cordova platform add android
+    - ionic cordova build android --release
+    #- jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore -storepass 123456 platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk alias_name
+  artifacts:
+    paths:
+      - platforms/android/app/build/outputs/apk
+
+#build ios apk file
+#build_ios:
+#  stage: deploy
+#  only:
+#    - master
+#  script:
+#    - ls
+#    - npm i
+#    - ionic cordova platform rm ios
+#    - ionic cordova platform add ios
+#    - ionic cordova build ios
+#  artifacts:
+#    paths:
+#      - platforms/android/app/build/outputs/ipa
