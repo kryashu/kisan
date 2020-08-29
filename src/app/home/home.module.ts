@@ -5,9 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import {Geolocation} from "@ionic-native/geolocation/ngx";
+import {NativeGeocoder} from "@ionic-native/native-geocoder/ngx";
 
 
 @NgModule({
+  providers: [Geolocation, NativeGeocoder],
   imports: [
     CommonModule,
     FormsModule,

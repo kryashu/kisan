@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo"><img src="./assets/logo/logo.png"></div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-margin-start ion-margin-end">
+    <div class="header">Select Language</div>
+    <ion-list class="list">
+        <ion-radio-group [(ngModel)]="selectedLang">
+            <ion-item *ngFor="let lang of language">
+                <ion-label>{{lang}}</ion-label>
+                <ion-radio slot="start" [value]="lang"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+        <ion-button expand="block" class="button" (click)="router.navigate(['signin'])">Sign In</ion-button>
+        <div class="signup" (click)="router.navigate(['signup'])"> Sign Up </div>
+        <div class="home" (click)="router.navigate(['home'])">Continue to homepage</div>
+    </div>
+</ion-content>

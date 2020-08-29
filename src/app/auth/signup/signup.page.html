@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="logo"><img src="./assets/logo/logo.png"></div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="ion-margin-start ion-margin-end">
+    <div class="header"> Sign Up</div>
+    <ion-input class="ion-margin-top" placeholder="Enter Phone Number" type="tel" maxlength="10" minlength="10" [(ngModel)]="phoneNumber" (ngModelChange)="warningFlag = false"></ion-input>
+    <div class="warning" *ngIf="warningFlag">Enter Valid Phone Number</div>
+    <ion-button class="button" expand="block" (click)="verify()">Send otp</ion-button>
+    <div class="or">OR</div>
+    <div class="social">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="social-button" style="margin-right: 20px">
+            <div><img src="./assets/logo/google.png"></div>
+          </ion-col>
+          <ion-col class="social-button">
+            <div ><img src="./assets/logo/facebook.png"></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

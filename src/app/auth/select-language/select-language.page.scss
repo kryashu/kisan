@@ -1,0 +1,28 @@
+ion-radio{
+  --color-checked: green;
+}
+.button{
+  --background: green;
+  text-transform: none;
+  font-weight: bold;
+  margin-top: 30%;
+}
+.signup{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5%;
+}
+.list{
+  margin-top: 10%;
+}
+.home{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 5%;
+}
