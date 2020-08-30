@@ -1,4 +1,62 @@
-.div-name{
+.div-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.city-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   font-weight: bold;
   font-size: 15px;
+  white-space: nowrap;
+}
+
+ion-grid {
+  padding: 0;
+}
+
+ion-col {
+  padding: 0;
+}
+
+ion-row {
+  padding: 0;
+}
+
+ion-slide {
+  display: block;
+}
+
+.slide-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 60px;
+}
+
+.div {
+  margin-top: 20%;
+}
+.card{
+  width: 80px
+}
+ion-card-content{
+  padding-bottom: 0;
+}
+.card-div{
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

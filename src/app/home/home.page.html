@@ -1,13 +1,83 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <div class="logo"><img src="./assets/logo/logo.png"></div>
-  </ion-toolbar>
+    <ion-toolbar>
+        <div class="logo"><img src="./assets/logo/logo.png"></div>
+    </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div class="ion-margin-start ion-margin-end">
-  <div class="ion-margin-top">
-    <div class="div-name">Weather Forecast</div>
-    <div class="city-name">{{city}}</div>
-  </div>
-  </div>
+    <div class="ion-margin-start ion-margin-end">
+        <div class="ion-margin-top">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <div class="div-name ion-float-left">Weather Information</div>
+                    </ion-col>
+                    <ion-col>
+                        <div class="city-name ion-float-right"><img src="./assets/map-pin.png" width="15">{{city}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-card>
+                <ion-card-header>
+                    Rainy
+                </ion-card-header>
+            </ion-card>
+        </div>
+        <div class="div">
+            <ion-grid>
+                <ion-row>
+                    <div class="div-name">Our Services</div>
+                </ion-row>
+                <ion-row class="card-div">
+                        <ion-card class="card">
+                            <ion-card-content>
+                                <img src="./assets/mandi.png">
+                                <div class="city-name">Mandi</div>
+                            </ion-card-content>
+                        </ion-card>
+                        <ion-card class="card">
+                            <ion-card-content>
+                                <img src="./assets/buy.png">
+                                <div class="city-name">Trade</div>
+                            </ion-card-content>
+                        </ion-card>
+                        <ion-card class="card">
+                            <ion-card-content>
+                                <img src="./assets/crops.png">
+                                <div class="city-name">Crops Info</div>
+                            </ion-card-content>
+                        </ion-card>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <div class="div">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="10">
+                        <div class="div-name ion-float-left">Shop</div>
+                    </ion-col>
+                    <ion-col>
+                        <div class="city-name ion-float-right"> >></div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-slides [options]="slideOptsOne">
+                <ion-slide>
+                    <div class="slide-image"><img src="./assets/seeds.jpeg"></div>
+                    <div class="city-name">Seeds</div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="slide-image"><img src="./assets/fertilizer.jpg"></div>
+                    <div class="city-name">Fertilizers</div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="slide-image"><img src="./assets/hardware.jpg"></div>
+                    <div class="city-name">Hardwares</div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="slide-image"><img src="./assets/insecticide.jpeg"></div>
+                    <div class="city-name">Insecticide</div>
+                </ion-slide>
+            </ion-slides>
+        </div>
+    </div>
 </ion-content>

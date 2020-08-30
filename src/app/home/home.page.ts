@@ -16,6 +16,11 @@ export class HomePage {
         maxResults: 5
     };
     city = 'abla';
+    slideOptsOne = {
+        initialSlide: 0,
+        slidesPerView: 1,
+        autoplay: true
+    };
 
     constructor(private geolocation: Geolocation,
                 private nativeGeocoder: NativeGeocoder) {
@@ -52,7 +57,7 @@ export class HomePage {
     getcity(latitude, longitude) {
         this.nativeGeocoder.reverseGeocode(latitude, longitude, this.options1)
             .then((result: NativeGeocoderResult[]) => {
-                this.city = JSON.stringify(result[0]);
+                this.city = result[0].subAdministrativeArea;
                 console.log(JSON.stringify(result[0]))
             })
             .catch((error: any) => console.log(error));
