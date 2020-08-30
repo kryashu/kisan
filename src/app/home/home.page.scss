@@ -41,11 +41,10 @@ ion-slide {
   text-align: center;
   width: 200px;
   height: 200px;
-  margin-left: 60px;
 }
 
 .div {
-  margin-top: 20%;
+  margin-top: 15%;
 }
 .card{
   width: 80px
@@ -59,4 +58,16 @@ ion-card-content{
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.div-card{
+  margin-top: 8%;
+}
+.play{
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  alitgn-items: center;
+  text-align: center;
+  height: 10rem;
+  margin-bottom: 5%;
 }

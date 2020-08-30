@@ -3,24 +3,39 @@
         <div class="logo"><img src="./assets/logo/logo.png"></div>
     </ion-toolbar>
 </ion-header>
+
 <ion-content>
     <div class="ion-margin-start ion-margin-end">
         <div class="ion-margin-top">
+            <ion-card style="background-color: cornflowerblue;margin: 0">
+                <ion-card-header style="color: white; font-weight: bold;">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="8">
+                              30 August |  {{city}}
+                            </ion-col>
+                            <ion-col size="4">
+                                Rainy | 30&#730;C
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card-header>
+            </ion-card>
+        </div>
+        <div class="div">
+            <div class="play">
+                <img src="./assets/icon/play.png" width="40" height="40" style="margin-top: 17%">
+            </div>
             <ion-grid>
                 <ion-row>
-                    <ion-col>
-                        <div class="div-name ion-float-left">Weather Information</div>
+                    <ion-col size="10">
+                        <div class="city-name ion-float-left">Title of Video</div>
                     </ion-col>
-                    <ion-col>
-                        <div class="city-name ion-float-right"><img src="./assets/map-pin.png" width="15">{{city}}</div>
+                    <ion-col size="2">
+                        <div style="font-size: smaller; white-space: nowrap"> View All>></div>
                     </ion-col>
                 </ion-row>
             </ion-grid>
-            <ion-card>
-                <ion-card-header>
-                    Rainy
-                </ion-card-header>
-            </ion-card>
         </div>
         <div class="div">
             <ion-grid>
@@ -55,27 +70,28 @@
                     <ion-col size="10">
                         <div class="div-name ion-float-left">Shop</div>
                     </ion-col>
-                    <ion-col>
-                        <div class="city-name ion-float-right"> >></div>
-                    </ion-col>
                 </ion-row>
             </ion-grid>
             <ion-slides [options]="slideOptsOne">
                 <ion-slide>
-                    <div class="slide-image"><img src="./assets/seeds.jpeg"></div>
+                   <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Seeds</div>
                 </ion-slide>
                 <ion-slide>
-                    <div class="slide-image"><img src="./assets/fertilizer.jpg"></div>
+                    <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Fertilizers</div>
                 </ion-slide>
                 <ion-slide>
-                    <div class="slide-image"><img src="./assets/hardware.jpg"></div>
+                    <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Hardwares</div>
                 </ion-slide>
                 <ion-slide>
-                    <div class="slide-image"><img src="./assets/insecticide.jpeg"></div>
+                    <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Insecticide</div>
+                </ion-slide>
+                <ion-slide>
+                    <img src="./assets/seeds.jpeg" class="div-card">
+                    <div class="city-name">Cattle Food</div>
                 </ion-slide>
             </ion-slides>
         </div>

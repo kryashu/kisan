@@ -25,6 +25,12 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
+@font-face {
+  font-family: poppin;
+  src: url(./assets/Fonts/Poppins-Regular.ttf) format("opentype");
+}
+
+
 .header{
   font-weight: bold;
   font-size: 30px;
@@ -38,4 +44,11 @@
   display: flex;
   margin: auto;
 }
-
+.head-div{
+  --background: green;
+  color: white;
+  font-weight: bold;
+}
+.profile{
+  border-radius: 50%;
+}
