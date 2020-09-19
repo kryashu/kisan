@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="logo"><img src="./assets/logo/logo.png"></div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-margin-start ion-margin-end">
+  <div class="header">Crop List</div>
+  <ion-grid class="ion-margin-top">
+    <ion-row>
+      <ion-col size="4" *ngFor="let i of array" (click)="router.navigate(['crop-info'])">
+        <div style="display: block">
+          <img src="./assets/seeds.jpeg" style="border-radius: 50%; width: 100%; height: 100%">
+          <div style="display: flex; justify-content: center;align-items: center;text-align: center">Crop {{i}}</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</ion-content>
