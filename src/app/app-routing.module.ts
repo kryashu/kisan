@@ -59,6 +59,10 @@ const routes: Routes = [
     path: 'crop-info',
     loadChildren: () => import('./info/crop-info/crop-info.module').then( m => m.CropInfoPageModule)
   },
+  {
+    path: 'problem-info',
+    loadChildren: () => import('./info/problem-info/problem-info.module').then( m => m.ProblemInfoPageModule)
+  },
 ];
 
 @NgModule({

@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+  },
+  {
+    path: 'view-all-video',
+    loadChildren: () => import('./view-all-video/view-all-video.module').then( m => m.ViewAllVideoPageModule)
   }
 ];
 

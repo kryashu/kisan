@@ -12,7 +12,7 @@
                     <ion-grid>
                         <ion-row>
                             <ion-col size="8">
-                              30 August |  {{city}}
+                                {{myDate | date: 'dd MMMM'}} |  {{city}}
                             </ion-col>
                             <ion-col size="4">
                                 Rainy | 30&#730;C
@@ -32,7 +32,7 @@
                         <div class="city-name ion-float-left">Title of Video</div>
                     </ion-col>
                     <ion-col size="2">
-                        <div style="font-size: smaller; white-space: nowrap"> View All>></div>
+                        <div style="font-size: smaller; white-space: nowrap" (click)="router.navigate(['home','view-all-video'])"> View All>></div>
                     </ion-col>
                 </ion-row>
             </ion-grid>

@@ -22,7 +22,7 @@ export class HomePage {
         slidesPerView: 1,
         autoplay: true
     };
-
+    myDate = Date.now();
     constructor(private geolocation: Geolocation,
                 private nativeGeocoder: NativeGeocoder,
                 private router: Router) {

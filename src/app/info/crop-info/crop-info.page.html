@@ -18,7 +18,7 @@
         <div [ngSwitch]="type">
             <div *ngSwitchCase="'info'">
                 <div class="header">Crop Info</div>
-                <img src="./assets/seeds.jpeg" style="width: 100%" class="ion-margin-top">
+                <img src="./assets/seeds.jpeg" style="width: 100%" class="ion-margin-tophow to show loac">
                 <div class="ion-margin-top"><p class="subhead">What is Lorem Ipsum?</p>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the
@@ -90,7 +90,7 @@
             <div *ngSwitchCase="'problem'">
                 <ion-grid class="ion-margin-top">
                     <ion-row>
-                        <ion-col size="6" *ngFor="let i of array">
+                        <ion-col size="6" *ngFor="let i of array" (click)="router.navigate(['problem-info'])">
                             <img src="./assets/seeds.jpeg">
                             <div style="display: flex; justify-content: center; align-items: center; text-align: center">Problem {{i}}</div>
                         </ion-col>
