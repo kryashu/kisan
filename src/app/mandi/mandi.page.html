@@ -1,9 +1,78 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>mandi</ion-title>
+    <div class="logo"><img src="./assets/logo/logo.png"></div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<div class="ion-margin-start ion-margin-end">
+  <div class="header">Mandi</div>
+  <div class="ion-margin-top">
+    <ion-item>
+      <ion-label>Crop Name:</ion-label>
+      <ion-input [(ngModel)]="name"></ion-input>
+    </ion-item>
+        <ion-item class="ion-margin-top">
+          <ion-label>State:</ion-label>
+          <ion-select [(ngModel)]="state">
+            <ion-select-option value="f">ABC</ion-select-option>
+            <ion-select-option value="m">XYZ</ion-select-option>
+            <ion-select-option value="r">PQR</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="ion-margin-top">
+          <ion-label >City:</ion-label>
+          <ion-select [(ngModel)]="city">
+            <ion-select-option value="f">ABC</ion-select-option>
+            <ion-select-option value="m">XYZ</ion-select-option>
+            <ion-select-option value="r">PQR</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="ion-margin-top">
+          <ion-label>Mandi:</ion-label>
+          <ion-select [(ngModel)]="mandi">
+            <ion-select-option value="f">ABC</ion-select-option>
+            <ion-select-option value="m">XYZ</ion-select-option>
+            <ion-select-option value="r">PQR</ion-select-option>
+          </ion-select>
+        </ion-item>
+  </div>
+  <div class="ion-margin-top" *ngIf="city && mandi && state && name">
+    <div class="subhead" style="margin-top: 0">{{myDate | date: 'dd MMMM yyyy'}}</div>
+    <ion-card *ngFor="let crop of list">
+      <div>
+        <ion-grid>
+          <ion-row >
+            <ion-col size="4">
+              <img src="./assets/seeds.jpeg" style="width: 100%; height: 100%">
+            </ion-col>
+            <ion-col size="8">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="10">
+                    <div class="crop-name">{{crop.name}}</div>
+                  </ion-col>
+                  <ion-col size="2">
+                    <img src="./assets/icon/share.png" style="width: 15px" class="ion-float-right">
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6">
+                    <div>Max: <br>{{crop.max}}<span style="font-size: smaller">(per kg)</span></div>
+                  </ion-col>
+                  <ion-col size="6">
+                    <div>Min:<br>{{crop.min}}<span style="font-size: smaller">(per kg)</span></div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card>
+  </div>
+</div>
 </ion-content>

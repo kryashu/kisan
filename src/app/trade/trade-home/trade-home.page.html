@@ -19,11 +19,11 @@
 <div class="ion-margin-start ion-margin-end ion-margin-top">
 <div *ngIf="type === 'sell'">
   <ion-card *ngFor="let crop of sellList" (click)="presentModal()">
-    <div style="margin-left: 10px">
+    <div>
       <ion-grid>
         <ion-row >
         <ion-col size="4">
-          <img src="./assets/seeds.jpeg">
+          <img src="./assets/seeds.jpeg" style="width: 100%; height: 100%">
         </ion-col>
         <ion-col size="8">
           <ion-grid>
@@ -40,13 +40,13 @@
             </ion-row>
             <ion-row>
               <ion-col size="5">
-                <div style="white-space: nowrap">{{crop.quantityAvailable}} Quintal</div>
+                <div style="white-space: nowrap">Quantity: <br>{{crop.quantityAvailable}} Quintal</div>
               </ion-col>
-              <ion-col size="2">
+              <ion-col size="2.5">
 
               </ion-col>
-              <ion-col size="5">
-                <div style="white-space: nowrap">${{crop.price}} <span style="font-size: smaller">(per kg)</span></div>
+              <ion-col size="4.5">
+                <div style="white-space: nowrap">Price: <br>${{crop.price}} <span style="font-size: smaller">(per kg)</span></div>
               </ion-col>
             </ion-row>
           </ion-grid>

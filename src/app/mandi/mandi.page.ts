@@ -8,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class MandiPage implements OnInit {
 
   constructor() { }
-
+  name;
+  state;
+  city;
+  mandi;
+  list = [{name: 'Crop Name', max: '$200', min: '$180'}];
+  myDate = Date.now();
   ngOnInit() {
   }
-
 }
