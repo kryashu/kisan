@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
 import {Geolocation} from '@ionic-native/geolocation/ngx';
-import {Platform} from '@ionic/angular';
+import {NavController, Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-root',
@@ -10,12 +11,23 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
     styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+    subscribe: any;
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private geolocation: Geolocation
+        private geolocation: Geolocation,
+        private router: Router,
+        private navCtrl: NavController
     ) {
+        this.subscribe = this.platform.backButton.subscribeWithPriority(100, () => {
+            if (this.router.url === '/home' || this.router.url === '/splash') {
+                // tslint:disable-next-line
+                navigator['app'].exitApp();
+            }else{
+                this.navCtrl.pop();
+            }
+        });
         this.initializeApp();
     }
 
