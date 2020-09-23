@@ -1,0 +1,40 @@
+<ion-card *ngFor="let crop of List">
+  <div style="margin-left: 10px">
+    <ion-grid>
+      <ion-row >
+        <ion-col size="3" style="display: flex;align-items: center;justify-content: center">
+          <img src="./assets/seeds.jpeg" style="width: 100%;height: 100%">
+        </ion-col>
+        <ion-col size="9">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="8">
+                <div class="crop-name">{{crop.name}}</div>
+              </ion-col>
+              <ion-col size="2">
+                <img src="./assets/icon/delete.png" style="width: 15px" class="ion-float-right">
+              </ion-col>
+              <ion-col size="2">
+                <img src="./assets/icon/share.png" style="width: 15px" class="ion-float-right">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="3">
+                <div style="white-space: nowrap">{{crop.type}}</div>
+              </ion-col>
+              <ion-col size="5">
+                <div style="white-space: nowrap">{{crop.quantityAvailable}} Quintal</div>
+              </ion-col>
+              <ion-col size="4">
+                <div style="white-space: nowrap">${{crop.price}} <span style="font-size: smaller">(per kg)</span></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-card>

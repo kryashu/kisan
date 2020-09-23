@@ -4,20 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TradePostPageRoutingModule } from './trade-post-routing.module';
+import { MyRequestsPageRoutingModule } from './my-requests-routing.module';
 
-import { TradePostPage } from './trade-post.page';
+import { MyRequestsPage } from './my-requests.page';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
         IonicModule,
-        TradePostPageRoutingModule
+        MyRequestsPageRoutingModule
     ],
     exports: [
-        TradePostPage
+        MyRequestsPage
     ],
-    declarations: [TradePostPage]
+    declarations: [MyRequestsPage]
 })
-export class TradePostPageModule {}
+export class MyRequestsPageModule {}

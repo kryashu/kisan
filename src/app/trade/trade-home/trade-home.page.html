@@ -1,9 +1,66 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>trade-home</ion-title>
+    <div class="logo"><img src="./assets/logo/logo.png"></div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-segment [(ngModel)]="type" mode="ios">
+    <ion-segment-button value="sell">
+      <ion-label>Sell</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="buy">
+      <ion-label>Buy</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="my">
+      <ion-label>My Requests</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+<div class="ion-margin-start ion-margin-end ion-margin-top">
+<div *ngIf="type === 'sell'">
+  <ion-card *ngFor="let crop of sellList" (click)="presentModal()">
+    <div style="margin-left: 10px">
+      <ion-grid>
+        <ion-row >
+        <ion-col size="4">
+          <img src="./assets/seeds.jpeg">
+        </ion-col>
+        <ion-col size="8">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="10">
+              <div class="crop-name">{{crop.name}}</div>
+              </ion-col>
+              <ion-col size="2">
+                <img src="./assets/icon/share.png" style="width: 15px" class="ion-float-right">
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="5">
+                <div style="white-space: nowrap">{{crop.quantityAvailable}} Quintal</div>
+              </ion-col>
+              <ion-col size="2">
 
+              </ion-col>
+              <ion-col size="5">
+                <div style="white-space: nowrap">${{crop.price}} <span style="font-size: smaller">(per kg)</span></div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-card>
+</div>
+  <div *ngIf="type === 'buy'">
+    <app-trade-post></app-trade-post>
+  </div>
+  <div *ngIf="type === 'my'">
+<app-my-requests></app-my-requests>
+  </div>
+</div>
 </ion-content>

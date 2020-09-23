@@ -57,3 +57,26 @@
 .profile{
   border-radius: 50%;
 }
+.button-primary {
+  --background: green;
+  text-transform: none;
+  font-weight: bold;
+  margin-top: 10%;
+}
+ion-item {
+  --padding-start: 0px;
+  --inner-padding-end: 0px;
+  border-bottom: 1px solid #EFEFEF;
+  --highlight-color-focused: green;
+  --border-width: 0 0 .1px 0;
+  --show-full-highlight: .5
+}
+.modal-css .modal-wrapper{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+  border-radius: 15px;
+  width: 90%;
+  height: 40%;
+  position: absolute;
+}

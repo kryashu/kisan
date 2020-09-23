@@ -1,9 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>trade-details</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-
-</ion-content>
+<div class="ion-margin-start ion-margin-end ion-margin-top">
+  <div class="subhead" style="margin-top: 0px">Sell Request</div>
+<ion-item class="ion-margin-top">
+  <ion-label>Quantity:</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+  <ion-item class="ion-margin-top">
+    <ion-label>Pickup Address:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-button expand="block" class="button-primary" (click)="dismiss()">Submit</ion-button>
+</div>

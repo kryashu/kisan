@@ -63,6 +63,10 @@ const routes: Routes = [
     path: 'problem-info',
     loadChildren: () => import('./info/problem-info/problem-info.module').then( m => m.ProblemInfoPageModule)
   },
+  {
+    path: 'my-requests',
+    loadChildren: () => import('./trade/my-requests/my-requests.module').then( m => m.MyRequestsPageModule)
+  },
 ];
 
 @NgModule({
