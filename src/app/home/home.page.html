@@ -76,23 +76,23 @@
                 </ion-row>
             </ion-grid>
             <ion-slides [options]="slideOptsOne">
-                <ion-slide>
+                <ion-slide (click)="router.navigate(['product-list', {value: 'Seeds'}])">
                    <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Seeds</div>
                 </ion-slide>
-                <ion-slide>
+                <ion-slide (click)="router.navigate(['product-list', {value: 'Fertilizers'}])">
                     <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Fertilizers</div>
                 </ion-slide>
-                <ion-slide>
+                <ion-slide (click)="router.navigate(['product-list', {value: 'Hardware'}])">
                     <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Hardwares</div>
                 </ion-slide>
-                <ion-slide>
+                <ion-slide (click)="router.navigate(['product-list', {value: 'Pesticide'}])">
                     <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Insecticide</div>
                 </ion-slide>
-                <ion-slide>
+                <ion-slide (click)="router.navigate(['product-list', {value: 'Cattle Food'}])">
                     <img src="./assets/seeds.jpeg" class="div-card">
                     <div class="city-name">Cattle Food</div>
                 </ion-slide>

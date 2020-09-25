@@ -67,6 +67,50 @@ const routes: Routes = [
     path: 'my-requests',
     loadChildren: () => import('./trade/my-requests/my-requests.module').then( m => m.MyRequestsPageModule)
   },
+  {
+    path: 'category-list',
+    loadChildren: () => import('./shop/category-list/category-list.module').then( m => m.CategoryListPageModule)
+  },
+  {
+    path: 'product-list',
+    loadChildren: () => import('./shop/product-list/product-list.module').then( m => m.ProductListPageModule)
+  },
+  {
+    path: 'product-details',
+    loadChildren: () => import('./shop/product-details/product-details.module').then( m => m.ProductDetailsPageModule)
+  },
+  {
+    path: 'cart',
+    loadChildren: () => import('./shop/cart/cart.module').then( m => m.CartPageModule)
+  },
+  {
+    path: 'add-address',
+    loadChildren: () => import('./address/add-address/add-address.module').then( m => m.AddAddressPageModule)
+  },
+  {
+    path: 'edit-address',
+    loadChildren: () => import('./address/edit-address/edit-address.module').then( m => m.EditAddressPageModule)
+  },
+  {
+    path: 'address-list',
+    loadChildren: () => import('./address/address-list/address-list.module').then( m => m.AddressListPageModule)
+  },
+  {
+    path: 'order-list',
+    loadChildren: () => import('./orders/order-list/order-list.module').then( m => m.OrderListPageModule)
+  },
+  {
+    path: 'order-details',
+    loadChildren: () => import('./orders/order-details/order-details.module').then( m => m.OrderDetailsPageModule)
+  },
+  {
+    path: 'track-order',
+    loadChildren: () => import('./orders/track-order/track-order.module').then( m => m.TrackOrderPageModule)
+  },
+  {
+    path: 'custom-sell-request',
+    loadChildren: () => import('./trade/custom-sell-request/custom-sell-request.module').then( m => m.CustomSellRequestPageModule)
+  },
 ];
 
 @NgModule({

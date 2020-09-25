@@ -1,0 +1,34 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo"><img src="./assets/logo/logo.png"></div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-margin-start ion-margin-end">
+        <div class="header">{{title}}</div>
+        <ion-grid class="ion-margin-top">
+            <ion-row>
+                <ion-col size="6" *ngFor="let i of productList" (click)="router.navigate(['product-details'])">
+                    <ion-card>
+                        <ion-card-content>
+                        <img src="./assets/seeds.jpeg">
+                        <div class="ion-text-center">
+                            Product {{i}}</div>
+                            <ion-grid>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        $500
+                                    </ion-col>
+                                    <ion-col size="6" style="white-space: nowrap">
+                                        500 gm
+                                    </ion-col>
+                                </ion-row>
+                            </ion-grid>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

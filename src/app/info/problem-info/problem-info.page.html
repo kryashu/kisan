@@ -76,6 +76,30 @@
             non-characteristic
             words etc.</p>
         </div>
+    <div class="head">Suggested Products:</div>
+    <div>
+      <ion-slides [options]="slideOptsOne">
+        <ion-slide *ngFor="let i of array" (click)="router.navigate(['product-details'])">
+          <ion-card>
+            <ion-card-content>
+              <img src="./assets/seeds.jpeg">
+              <div class="ion-text-center">
+                Product {{i}}</div>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6">
+                    $500
+                  </ion-col>
+                  <ion-col size="6" style="white-space: nowrap">
+                    500 gm
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
       </div>
 
 

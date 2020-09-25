@@ -1,0 +1,94 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo"><img src="./assets/logo/logo.png"></div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="./assets/seeds.jpeg" style="width: 100%">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="10">
+                    <div class="head">Product Name</div>
+                </ion-col>
+                <ion-col size="2">
+                    <img src="./assets/icon/share.png" style="width: 20px" class="ion-float-right">
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="9">
+                    <div class="smallhead">$500</div>
+                </ion-col>
+                <ion-col size="3">
+                    <div>
+                        <ion-grid style="padding: 0">
+                            <ion-row style="padding: 0">
+                                <ion-col class="col">
+                                    <div (click)="remove()" class="button-div">-</div>
+                                </ion-col>
+                                <ion-col class="col">
+                                    <div class="button-div">{{count}}</div>
+                                </ion-col>
+                                <ion-col style="padding: 0">
+                                    <div (click)="add()" class="button-div">+</div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="2">
+                    Type:
+                </ion-col>
+                <ion-col *ngFor="let type of typeList" size="3">
+                    <div class="button-div" style="border-radius: 7px">{{type}}</div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <div class="ion-margin-start ion-margin-end">
+        <div class="subhead">Description:</div>
+        <div>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies orci quam, id posuere nisl
+                pellentesque eu. Nulla facilisi. Mauris vitae pharetra nulla, ac placerat dui. Mauris ac arcu fermentum,
+                congue nunc ac, bibendum nisl. Morbi lacinia auctor volutpat. Vivamus vitae tortor eleifend, convallis
+                neque nec, convallis justo. Maecenas fringilla convallis sagittis. Vestibulum eu enim eleifend, rutrum
+                lectus sed, hendrerit orci. Suspendisse venenatis at lacus non viverra. Donec elit leo, consectetur quis
+                sollicitudin nec, efficitur aliquam tortor. Praesent bibendum, eros vel cursus ultrices, diam ligula
+                feugiat tortor, nec posuere dolor ligula quis velit.
+            </p>
+         <p>   Vivamus est dolor, ullamcorper sed pulvinar nec, mattis ut elit. Morbi a enim ut erat sagittis molestie.
+            Nulla ut lorem ligula. Aenean eget orci ac diam consectetur tempor. Phasellus eros nisl, commodo ut nisi sit
+            amet, elementum mattis sapien. Integer aliquet orci lacus, vel pellentesque mi pellentesque vitae. Curabitur
+            nec lorem a velit mollis vestibulum. In id nisl nunc. Aenean arcu metus, aliquam non augue non, semper
+            dignissim leo. Maecenas dapibus gravida nisi, vitae porttitor ligula lacinia a. Duis in massa vestibulum mi
+            vestibulum faucibus ut eu augue. Ut elementum egestas lorem quis pharetra. Donec elementum sem est, in
+             mollis lectus vehicula et. Vestibulum et urna libero. Morbi pharetra ipsum in ante commodo mattis.</p>
+
+          <p>  Cras nunc ligula, euismod sed sem eget, gravida faucibus magna. Phasellus mollis semper massa sed finibus.
+            Cras aliquet ac sem eu hendrerit. Vivamus maximus velit quam, eu pulvinar nisl pretium nec. In posuere justo
+            eget vehicula imperdiet. Vestibulum velit felis, lobortis sed diam fringilla, facilisis imperdiet felis.
+            Quisque sit amet sem nec tortor lobortis feugiat. Mauris vitae neque non massa condimentum posuere.
+            Phasellus id lectus scelerisque, pulvinar ex in, commodo purus. Pellentesque iaculis posuere nisi. In at
+            bibendum lectus, non posuere nibh. In hac habitasse platea dictumst. Pellentesque at gravida ipsum, eu
+            sagittis dolor. Aenean consequat fringilla justo, vitae hendrerit magna consectetur ac.</p>
+
+
+        </div>
+    </div>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6">
+                <ion-button expand="block" class="button-primary">Add to Cart</ion-button>
+            </ion-col>
+            <ion-col size="6">
+                <ion-button expand="block" class="button-primary">Buy Now</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

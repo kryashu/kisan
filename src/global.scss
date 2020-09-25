@@ -36,6 +36,15 @@
   font-size: 30px;
   margin-top: 30px;
 }
+.head{
+  font-weight: bold;
+  font-size: 20px;
+}
+.smallhead{
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .subhead{
   font-weight: bold;
   font-size: 20px;
@@ -77,6 +86,6 @@ ion-item {
   margin-top: 10%;
   border-radius: 15px;
   width: 90%;
-  height: 40%;
+  height: 260px;
   position: absolute;
 }
