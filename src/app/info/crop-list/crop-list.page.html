@@ -1,21 +1,23 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar>
-    <div class="logo"><img src="./assets/logo/logo.png"></div>
-  </ion-toolbar>
+    <ion-toolbar>
+        <div class="logo"><img src="./assets/logo/logo.png"></div>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<div class="ion-margin-start ion-margin-end">
-  <div class="header">Crop List</div>
-  <ion-grid class="ion-margin-top">
-    <ion-row>
-      <ion-col size="6" *ngFor="let i of array" (click)="router.navigate(['crop-info'])">
-        <div style="display: block;justify-content: center;align-items: center;text-align: center">
-          <img src="./assets/seeds.jpeg" style="width: 80%; height: 80%">
-          <div>Crop {{i}}</div>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</div>
+    <div class="ion-margin-start ion-margin-end">
+        <div class="header">Crop List</div>
+        <ion-grid class="ion-margin-top">
+            <ion-row>
+                <ion-col size="6" *ngFor="let i of array" (click)="router.navigate(['crop-info'])">
+                    <ion-card>
+                        <ion-card-content>
+                                <img src="./assets/seeds.jpeg" style="width: 100%; height: 100%">
+                                <div style="text-align: center">Crop {{i}}</div>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>
